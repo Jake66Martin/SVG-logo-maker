@@ -42,7 +42,7 @@ inquirer
       type: 'list',
       message: 'Please choose from one of the following shape options',
       name: 'shape',
-      choices: ["square", "circle", "triangle"]
+      choices: ["Square", "Circle", "Triangle"]
     },
     {
         type: 'input',
