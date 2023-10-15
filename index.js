@@ -13,7 +13,7 @@ function writeToFile(response) {
     console.log(response);
     }
 
-
+function init () {
 inquirer
   .prompt([
     {
@@ -42,7 +42,7 @@ inquirer
       type: 'list',
       message: 'Please choose from one of the following shape options',
       name: 'shape',
-      choices: ["Square", "Circle", "Triangle"]
+      choices: ["square", "circle", "triangle"]
     },
     {
         type: 'input',
@@ -62,3 +62,6 @@ inquirer
     writeToFile(response);
   }
   );
+}
+
+  init();
