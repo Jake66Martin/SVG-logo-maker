@@ -20,11 +20,11 @@ return `<svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/200
 
 </svg>`
 
-} else if (response.shape === "Trianle") {
+} else if (response.shape === "Triangle") {
 
 return `<svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg">
 
-<circle cx="150" cy="100" r="80" fill="${response.shapeColours}" />
+<polygon points = "150,0 25,175 275,175" fill="${response.shapeColours}" />
 
 <text x="150" y="125" font-size="60" text-anchor="middle" fill="${response.textColours}">${response.text}</text>
 
