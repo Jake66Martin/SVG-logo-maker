@@ -1,6 +1,6 @@
 const fs = require("fs")
 const inquirer = require("inquirer")
-const logo = require("./Utils/generateLogo.js")
+const logo = require("./Lib/generateLogo.js")
 const hexPattern = /^#?([a-f0-9]{6}|[a-f0-9]{3})$/i;
 
 
@@ -60,8 +60,13 @@ inquirer
     console.log("Success on making your logo!");
     logo.generateLogo(response);
     writeToFile(response);
+    
+  
+    
+      return response
   }
   );
 }
 
   init();
+
