@@ -4,4 +4,7 @@ class Circle {
     }
 }
 
-const square = new Shape(15, "Jacob")
+
+module.exports = {
+    Circle
+}

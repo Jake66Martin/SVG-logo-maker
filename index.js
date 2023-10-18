@@ -1,17 +1,21 @@
 const fs = require("fs")
 const inquirer = require("inquirer")
 const logo = require("./Lib/generateLogo.js")
+const shape = require("./Lib/shape.js")
+const square = require("./Lib/square.js")
+const circle = require("./Lib/circle.js")
+const triangle = require("./Lib/triangle.js")
 const hexPattern = /^#?([a-f0-9]{6}|[a-f0-9]{3})$/i;
 
 
-function writeToFile(response) {
+// function writeToFile(response) {
   
-    fs.writeFile(`${response.shape}.svg`, logo.generateLogo(response), (err) =>
-    err ? console.error(err) : console.log('Mission success human!')
-    );
+//     fs.writeFile(`${response.shape}.svg`, logo.generateLogo(response), (err) =>
+//     err ? console.error(err) : console.log('Mission success human!')
+//     );
     
-    console.log(response);
-    }
+//     console.log(response);
+//     }
 
 function init () {
 inquirer
@@ -58,15 +62,21 @@ inquirer
   ])
   .then((response) => {
     console.log("Success on making your logo!");
-    logo.generateLogo(response);
-    writeToFile(response);
+    // logo.generateLogo(response);
+    // writeToFile(response);
+    let yolo = new shape.Shape(response.text, response.textColour)
     
   
     
-      return response
+      
   }
   );
 }
 
+
+
   init();
+  
+
+
 
