@@ -68,6 +68,7 @@ function init() {
         writeToFile(response)
       } else if (response.shape === "Square") {
         const square1 = new square.Square(response.text, response.textColours, response.shapeColours)
+        shapeData = square1.render()
         writeToFile(response)
       } else if (response.shape === "Triangle") {
         const triangle1 = new triangle.Triangle(response.text, response.textColours, response.shapeColours)
