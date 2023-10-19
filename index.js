@@ -1,7 +1,5 @@
 const fs = require("fs")
 const inquirer = require("inquirer")
-const logo = require("./Lib/generateLogo.js")
-const shape = require("./Lib/shape.js")
 const square = require("./Lib/square.js")
 const circle = require("./Lib/circle.js")
 const triangle = require("./Lib/triangle.js")
@@ -17,66 +15,68 @@ const hexPattern = /^#?([a-f0-9]{6}|[a-f0-9]{3})$/i;
 //     console.log(response);
 //     }
 
-function init () {
-inquirer
-  .prompt([
-    {
-      type: 'input',
-      message: 'What characters will your logo display? (up to 3 characters max)',
-      name: 'text',
-      validate: (input) => {
-        if (input.length > 3) {
-          return 'Length must be 3 characters or less.';
-        }
-        return true;
-      },
-    },
-    {
-      type: 'input',
-      message: 'Enter a hexidecimal in order to choose the text colour',
-      name: 'textColours',
-      validate: (input) => {
-        if (hexPattern.test(input) === true) {
-          return true;
-        }
-        return "Must be a valid hexidecimal code."
-      },
-    },
-    {
-      type: 'list',
-      message: 'Please choose from one of the following shape options',
-      name: 'shape',
-      choices: ["Square", "Circle", "Triangle"]
-    },
-    {
-        type: 'input',
-        message: 'Enter a hexidecimal in order to choose the shape colour',
-        name: 'shapeColours',
-        validate: (input) => {
-            if (hexPattern.test(input) === true) {
-              return true;
-            }
-            return "Must be a valid hexidecimal code."
-          },
-      },
-  ])
-  .then((response) => {
-    console.log("Success on making your logo!");
-    // logo.generateLogo(response);
-    // writeToFile(response);
-    let yolo = new shape.Shape(response.text, response.textColour)
+// function init () {
+// inquirer
+//   .prompt([
+//     {
+//       type: 'input',
+//       message: 'What characters will your logo display? (up to 3 characters max)',
+//       name: 'text',
+//       validate: (input) => {
+//         if (input.length > 3) {
+//           return 'Length must be 3 characters or less.';
+//         }
+//         return true;
+//       },
+//     },
+//     {
+//       type: 'input',
+//       message: 'Enter a hexidecimal in order to choose the text colour',
+//       name: 'textColours',
+//       validate: (input) => {
+//         if (hexPattern.test(input) === true) {
+//           return true;
+//         }
+//         return "Must be a valid hexidecimal code."
+//       },
+//     },
+//     {
+//       type: 'list',
+//       message: 'Please choose from one of the following shape options',
+//       name: 'shape',
+//       choices: ["Square", "Circle", "Triangle"]
+//     },
+//     {
+//         type: 'input',
+//         message: 'Enter a hexidecimal in order to choose the shape colour',
+//         name: 'shapeColours',
+//         validate: (input) => {
+//             if (hexPattern.test(input) === true) {
+//               return true;
+//             }
+//             return "Must be a valid hexidecimal code."
+//           },
+//       },
+//   ])
+//   .then((response) => {
+//     console.log("Success on making your logo!");
+//     logo.generateLogo(response);
+//     writeToFile(response);
+    
     
   
     
       
-  }
-  );
-}
+//   }
+//   );
+// }
 
 
 
-  init();
+//   init();
   
 
+let yolo = new square.Square()
+console.log(yolo.render())
 
 
