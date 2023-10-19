@@ -8,7 +8,7 @@ const hexPattern = /^#?([a-f0-9]{6}|[a-f0-9]{3})$/i;
 
 function writeToFile(response) {
 
-  fs.writeFile(`${response.shape}.svg`, shapeData, (err) =>
+  fs.writeFile(`./Examples/${response.shape}.svg`, shapeData, (err) =>
     err ? console.error(err) : console.log('Mission success human!')
   );
 
