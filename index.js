@@ -6,6 +6,8 @@ const triangle = require("./Lib/triangle.js")
 const hexPattern = /^#?([a-f0-9]{6}|[a-f0-9]{3})$/i;
 
 
+
+
 function writeToFile(response) {
 
   fs.writeFile(`./Examples/${response.shape}.svg`, shapeData, (err) =>
