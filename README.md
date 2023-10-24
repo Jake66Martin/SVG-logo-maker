@@ -10,3 +10,7 @@ should research online what the hex codes are for the desired colours.
 ![pic3](https://github.com/Jake66Martin/SVG-logo-maker/assets/139023505/a71b9cef-89b6-420d-bd3f-41d1cbae0e3b)
 ![pic2](https://github.com/Jake66Martin/SVG-logo-maker/assets/139023505/4972f420-df53-446b-a395-48ed2859732a)
 ![pic1](https://github.com/Jake66Martin/SVG-logo-maker/assets/139023505/93139a4d-0ce7-424a-8550-7dc70407acd7)
+
+## Video walkthrough
+
+https://drive.google.com/file/d/1YwpybSVYZQBd4uFBu5GTRX-V6yDOs39r/preview
